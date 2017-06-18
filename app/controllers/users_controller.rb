@@ -22,6 +22,7 @@ class UsersController < ApplicationController
       render json: @user
     else
       render_error(@user)
+    end
   end
 
   def destroy
@@ -37,5 +38,5 @@ class UsersController < ApplicationController
   def user_params
     params.require(:user).permit(:first_name, :last_name, :email)
   end
-  
+
 end
